@@ -18,11 +18,13 @@ Pretty print the tables
 ### Can I get an example?
 Yes, you can!
 ```
- m = MarkdownTableGenerator(["h1", "h2", "h3"])
-     m.add_row(["11", "12", "13"])
-     m.add_row(["21", "22", "23"])
-     m.add_row(["31", "32", "33"])
+m = MarkdownTableGenerator(["h1", "h2", "h3"])
+m.add_row(["11", "12", "13"])
+m.add_row(["21", "22", "23"])
+m.add_row(["31", "32", "33"])
 
-     print(m.make_table_string())
+print(m.make_table_string())
 ```
 
+### What Else Do I Need to Know?
+You need to know that the length of each row must match the length of the column headers.  If it doesn't match, then an ``IndexError`` exception is raised.
