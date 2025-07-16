@@ -9,9 +9,7 @@ class MDTableGenerator:
         return " ".join(table_row)
         
     def _mtg_make_table_header_sep(self, fields):
-        header_separator = []
-        for f in fields:
-            header_separator.append(" -------- ")
+        header_separator = [" ------- " for f in fields]
         return header_separator
     
     def __init__(self, header:list):
