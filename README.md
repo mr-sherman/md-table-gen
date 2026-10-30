@@ -10,6 +10,11 @@ Generates markdown tables given column headers and row data
 ### What it Does Not Do
 Pretty print the tables
 
+## Install
+```
+pip install markdown-table-gen
+```
+
 ## How To Use It
  1. Import it an instantiate it by giving it the column names
  2. Add the rows
@@ -18,7 +23,9 @@ Pretty print the tables
 ### Can I get an example?
 Yes, you can!
 ```
-m = MarkdownTableGenerator(["h1", "h2", "h3"])
+from markdown_table_gen import MDTableGenerator
+
+m = MDTableGenerator(["h1", "h2", "h3"])
 m.add_row(["11", "12", "13"])
 m.add_row(["21", "22", "23"])
 m.add_row(["31", "32", "33"])
